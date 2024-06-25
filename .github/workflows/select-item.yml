@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: echo value
         env:
-          INPUTS: ${{ inputs }}
+          INPUTS: ${{ inputs.target }}
           REF: ${{ github.ref_name }}
         run: |
           echo "${INPUTS}"
