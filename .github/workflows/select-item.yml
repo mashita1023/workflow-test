@@ -1,0 +1,24 @@
+on:
+  workflow_call:
+    inputs:
+      target:
+        description: 'select name'
+        type: string
+        required: true
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'select name'
+        type: choice
+        required: true
+        options:
+          - test-1
+          - test-2
+          - test-3
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo value
+        run: |
+          echo "{INPUTS_TARGET}"
