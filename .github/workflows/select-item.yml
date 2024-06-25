@@ -21,4 +21,4 @@ jobs:
     steps:
       - name: echo value
         run: |
-          echo "${INPUTS_TARGET}"
+          echo "${inputs}"
