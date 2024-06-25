@@ -20,6 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo value
+        env:
+          INPUTS: ${{ inputs }}
+          REF: ${{ github.ref_name }}
         run: |
-          echo "${inputs}"
-          echo "${github.ref_name}"
+          echo "${INPUTS}"
+          echo "${REF}"
